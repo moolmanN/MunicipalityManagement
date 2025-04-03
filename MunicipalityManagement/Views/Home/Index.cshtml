@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1 class="text-center mb-4">Welcome to Municipality Management</h1>
+
+<!-- Dashboard Cards -->
+<div class="row">
+    <!-- Citizen Management Card -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h5 class="card-title">Citizen Management</h5>
+                <p class="card-text">Register, edit, and view citizen information.</p>
+                <a href="@Url.Action("Index", "Citizen")" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Requests Card -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h5 class="card-title">Service Requests</h5>
+                <p class="card-text">Manage and track citizen service requests.</p>
+                <a href="@Url.Action("Index", "ServiceRequest")" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reports Management Card -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h5 class="card-title">Reports</h5>
+                <p class="card-text">View and manage municipal reports.</p>
+                <a href="@Url.Action("Index", "Reports")" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <!-- Staff Management Card -->
+    <div class="col-md-4 offset-md-2">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h5 class="card-title">Staff Management</h5>
+                <p class="card-text">Add, update, and manage staff records.</p>
+                <a href="@Url.Action("Index", "Staff")" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Management Tools (if applicable) -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h5 class="card-title">Settings</h5>
+                <p class="card-text">Configure and customize system settings.</p>
+                <a href="@Url.Action("Settings", "Home")" class="btn btn-secondary">Go</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@model MunicipalityManagement.Models.Citizen
+
+<h2>Citizen Details</h2>
+
+<div class="card p-4 shadow-sm">
+	<p><strong>Full Name:</strong> @Model.FullName</p>
+	<p><strong>Address:</strong> @Model.Address</p>
+	<p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+	<a href="@Url.Action("Index", "Citizen")" class="btn btn-primary">Back</a>
+</div>

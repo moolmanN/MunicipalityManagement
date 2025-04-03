@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MunicipalityManagement.Models.Report>
+
+<h2 class="mb-4">Reports</h2>
+<a class="btn btn-success mb-3" href="@Url.Action("Create", "Reports")">Submit New Report</a>
+
+<table class="table table-striped table-hover shadow-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>Report Type</th>
+            <th>Details</th>
+            <th>Citizen</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
+            <tr>
+                <td>@report.ReportType</td>
+                <td>@report.Details</td>
+                <td>@report.Citizen?.FullName</td>
+                <td>
+                    <a href="@Url.Action("Details", "Reports", new { id = report.ReportID })" class="btn btn-info btn-sm">Details</a>
+                    <a href="@Url.Action("Edit", "Reports", new { id = report.ReportID })" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="@Url.Action("Delete", "Reports", new { id = report.ReportID })" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+﻿@model MunicipalityManagement.Models.Citizen
+
+<h2>Add New Citizen</h2>
+
+<div class="card p-4 shadow-sm">
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName)
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", placeholder = "Enter full name" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address)
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Enter address" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber)
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Enter phone number" })
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="@Url.Action("Index", "Citizen")" class="btn btn-secondary">Cancel</a>
+    }
+</div>

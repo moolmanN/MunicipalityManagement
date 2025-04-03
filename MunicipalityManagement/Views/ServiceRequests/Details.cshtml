@@ -1,0 +1,10 @@
+﻿@model MunicipalityManagement.Models.ServiceRequest
+
+<h2>Service Request Details</h2>
+
+<div class="card p-4 shadow-sm">
+	<p><strong>Service Type:</strong> @Model.ServiceType</p>
+	<p><strong>Status:</strong> @Model.Status</p>
+	<p><strong>Citizen:</strong> @Model.Citizen?.FullName</p>
+	<a href="@Url.Action("Index", "ServiceRequest")" class="btn btn-primary">Back</a>
+</div>
